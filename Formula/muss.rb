@@ -11,29 +11,29 @@ class Muss < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/djbender/muss/releases/download/v0.9/muss_0.9_Darwin_x86_64.tar.gz"
-      sha256 "1c7786ad737e23eace04269d318e60ac4fd1d8acc7b445b901c57b01e387cea1"
+      sha256 "e66a6c62a30f8f9be7c6c2625df776798b90f303eda05c5442737a5e9ec12c3e"
     end
     if Hardware::CPU.arm?
       url "https://github.com/djbender/muss/releases/download/v0.9/muss_0.9_Darwin_arm64.tar.gz"
-      sha256 "579b599c18afbc66646dfb13412a660509c421910071527f5f798b92bc531fce"
+      sha256 "c5154a929fd93f157c0a58385224bc039d82d102403c0d3bacbe8fc62163043e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/djbender/muss/releases/download/v0.9/muss_0.9_Linux_x86_64.tar.gz"
-      sha256 "290bf514283f40ce713299676a8a1527c0ab8e84535491b3858db3453948ed90"
+      sha256 "fe8106d06b5c8bb2c95b35d8cfd55a479e949afaf391e088bce6040f24c76668"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/djbender/muss/releases/download/v0.9/muss_0.9_Linux_arm64.tar.gz"
-      sha256 "e40d42d7ad150fb4893b8c3b6c54794bdecbf746a381ecb167b2b9343fd59893"
+      sha256 "8e1b9d01a757c8e5688912f98f173770d89f90887db28fb9a4e2bce43ed35c97"
     end
   end
 
   depends_on "vault"
 
   def install
-    make "install"
+    bin.install "muss"
   end
 
   test do
