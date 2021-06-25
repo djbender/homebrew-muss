@@ -5,28 +5,28 @@
 class Muss < Formula
   desc ""
   homepage ""
-  version "0.8"
+  version "0.9"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/get-bridge/muss/releases/download/v0.8/muss_0.8_Darwin_x86_64.tar.gz"
-      sha256 "c258c7a91b7b92e5d24bb80ddbf28de258b473f5700a46b41e6b3cb53372e759"
+      url "https://github.com/djbender/muss/releases/download/v0.9/muss_0.9_Darwin_x86_64.tar.gz"
+      sha256 "031d1bd724114a91d8382cd688b4b3c27d32171549509b5646af9fbc01668525"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/get-bridge/muss/releases/download/v0.8/muss_0.8_Darwin_arm64.tar.gz"
-      sha256 "524abf6bce5c000a1984274b30096e7aa9c6b54aa0b83cd7fecad237b1e1c9e0"
+      url "https://github.com/djbender/muss/releases/download/v0.9/muss_0.9_Darwin_arm64.tar.gz"
+      sha256 "a9adc7958665303aff705a0db0b528b839e2535c0b8d749442365f42b411be0e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/get-bridge/muss/releases/download/v0.8/muss_0.8_Linux_x86_64.tar.gz"
-      sha256 "9b6b5f9220ca789be60887d1a682ed80d9d28a883a05482e04d5f2c1f7a6ba86"
+      url "https://github.com/djbender/muss/releases/download/v0.9/muss_0.9_Linux_x86_64.tar.gz"
+      sha256 "8da45e356bc44918fdbec84a16bc0c52387f7d9dd09362cfd84a181864d7b9dc"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/get-bridge/muss/releases/download/v0.8/muss_0.8_Linux_arm64.tar.gz"
-      sha256 "b8cb8add0689d4f796e30e32ed8a08a4fa1b0ccbff4d27e460be6fc3fa65d604"
+      url "https://github.com/djbender/muss/releases/download/v0.9/muss_0.9_Linux_arm64.tar.gz"
+      sha256 "56f98c968908abc4c90b5de7ac55fad7b0100c502be4f4eed294a436b529e7b5"
     end
   end
 
